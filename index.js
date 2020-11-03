@@ -1,9 +1,11 @@
 // Code your solution here
 
 function findMatching(drivers, s){
-    return drivers.filter(d => {
+    const match = drivers.filter(d => {
         return d.toLowerCase() === s.toLowerCase()
     })
+
+    return match
 }
 
 function fuzzyMatch(drivers, s){
@@ -13,7 +15,5 @@ function fuzzyMatch(drivers, s){
 }
 
 function matchName(drivers, s){
-    return drivers.filter(d => {
-        return d.name.toLowerCase() === s.toLowerCase()
-    })
+    return drivers.filter(d => {d.name.toLowerCase() === s.toLowerCase()})
 }
